@@ -240,7 +240,6 @@ class python_patcher:
     # 0: "run"s
     # 1: "printcode"
     def text_commands(self, commands_list):
-        self.output = ""
         i = 0
         while i < len(commands_list):
             command = commands_list[i].strip()
@@ -261,6 +260,7 @@ class python_patcher:
 
     # ChatGPT gives us a lot of noise. Try to get the meaningful commands out of it.
     def process_chatgpt_response(self, text_and_commands: str):
+        self.output = ""
         pp_commands = {"addfunc", "delfunc", "addimport", "delimport", "setmain", "printcode", "run"}
 
         # Remove text before triple backticks and after triple backticks
