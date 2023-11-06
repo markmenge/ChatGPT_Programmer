@@ -1,3 +1,25 @@
+ChatGPT Programmer is research project to investigate automated programming with ChatGPT
+I believe this project demonstrates level 4! (barely)
+
+The goal is to have ChatGPT write code, run code, and modify the code iteratively until the goal is accomplished.
+
+To see it run, run ChatGPT_Programmer.py
+
+Here's how it works:
+Open guess_number.py. When you run ChatGPT_Programmer.py (you'll need to set OPENAI_API_KEY first, see line 7)
+it will send a series of messages to ChatGPT explaining how to use commands to write and execute python using "Python Patcher" (PP) commands.
+It will explain the goal, which is to call the function guess_number, and guess the number until the goal is complete.
+
+Then in a loop:
+Step#
+1. Sends message history to ChatGPT and asks for a response
+   ChatGPT can responds with commands to write code or run code.
+2. Adds the output from step 1, to message history
+3. Asks the user (You) for any input
+4. Go to step 1
+
+Future work
+
 :::mermaid
   graph TD
     A([Start]) -->|User inputs mission statement and specifications - eventual goal| B[Automated Planning];
