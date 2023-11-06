@@ -22,24 +22,23 @@ Future work
 
 ```mermaid
   graph TD
-    A([Start]) -->|User inputs mission statement and specifications - eventual goal| B[Automated Planning];
-    B --> C[Generate Program Outline];
-    C -->|Create| D[Module Definitions];
-    C -->|Create| E[Milestones];
-    C -->|Create| F[Unit Tests];
-    D --> G[Develop Test.py];
-    F --> G;
-    G --> H{All Units Pass?};
-    H -->|Yes| I[Use Python Patcher Commands];
-    H -->|No, < 20 Attempts| G;
-    H -->|No, >= 20 Attempts| J[Break Down Task];
-    I --> K[Run Unit Tests];
-    K --> L[Step Through Debugger];
-    L --> M{Milestone Achieved?};
-    M -->|Yes| N[Commit to Revision Control];
-    M -->|No| L;
-    J --> G;
-    N --> O([End]);
+  A([Start]) -->|User inputs mission statement and specifications - eventual goal| B[Automated Planning];
+  B --> C[Generate Program Outline];
+  C -->|Create| D[Module Definitions];
+  C -->|Create| E[Milestones];
+  C -->|Create| F[Unit Tests];
+  D --> G[Develop Test.py];
+  F --> G;
+  G --> I[Use Python Patcher Commands];
+  I --> K[Run Unit Tests];
+  K --> H{All Units Pass?};
+  H -->|Yes| M{Milestone Achieved?};
+  H -->|No, < 20 Attempts| G;
+  H -->|No, >= 20 Attempts| J[Break Down Task];
+  M -->|Yes| N[Commit to Revision Control];
+  M -->|No| J[Break Down Task];
+  J --> G;
+  N --> O([End]);
 ```
 
 ### Components
