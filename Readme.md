@@ -20,7 +20,7 @@ Step#
 
 Future work
 
-:::mermaid
+```mermaid
   graph TD
     A([Start]) -->|User inputs mission statement and specifications - eventual goal| B[Automated Planning];
     B --> C[Generate Program Outline];
@@ -40,7 +40,7 @@ Future work
     M -->|No| L;
     J --> G;
     N --> O([End]);
-:::
+```
 
 ### Components
 
