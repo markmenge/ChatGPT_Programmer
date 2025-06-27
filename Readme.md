@@ -1,6 +1,6 @@
 # ChatGPT Programmer: A Research Initiative into AI-Powered Coding
 
-The ChatGPT Programmer is a pioneering research project aimed at exploring the potential for automated programming through the use of ChatGPT. Our ultimate ambition is to enable ChatGPT to autonomously write and execute code, pushing the boundaries of AI-assisted software development.
+The ChatGPT Programmer is a pioneering research project aimed at exploring the potential for Agentic Code Generation through the use of ChatGPT. Our ultimate ambition is to enable ChatGPT to autonomously write, execute and test, all in a loop thereby pushing the boundaries of AI-assisted software development.
 
 ## Getting Started
 
